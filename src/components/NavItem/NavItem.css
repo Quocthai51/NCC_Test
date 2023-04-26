@@ -1,0 +1,14 @@
+.NavContainer{
+    padding: 20px 10px;
+    color: gray;
+    border-bottom: 1px solid gray;
+}
+
+.active{
+    color: white
+}
+
+.NavContainer:hover{
+    background: #5C5C5C;
+    color: white;
+}

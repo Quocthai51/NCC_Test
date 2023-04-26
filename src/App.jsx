@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import LeftSlide from "./components/LeftSlide/LeftSlide";
+import "./App.css";
+import logo from "./assets/logoncc.png";
+import DescFile from "./components/DescFile/DescFile";
+import cssPhoto from "./assets/css.png";
+import dwPhoto from "./assets/dw.png";
+import urlPhoto from "./assets/url.png";
+import Footer from "./components/Footer";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <LeftSlide />
+      <div className="mainContainer">
+        <img className="logo" src={logo} />
+        <div className="description">
+          <p className="description--title">
+            Lorem ipsum dolor sit asmet?
+          </p>
+          <p className="description--text" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique consequat placerat. Vestibulum auctor pellentesque sem, eu posuere erat hendrerit quis. Maecenas vel consequat turpis. Nam facilisis, ligula in mattis sodales, augue justo tristique nulla, sed lacinia ante eros ut mi. Morbi vitae diam augue. Aliquam vel mauris a nibh auctor commodo. Praesent et nisi eu justo eleifend convallis. Quisque suscipit maximus vestibulum. Phasellus congue mollis orci, sit amet luctus augue tristique eu. Donec vulputate odio neque, sed semper turpis pellentesque a.</p>
+        </div>
+        <div className="group-items">
+          <DescFile image={cssPhoto} />
+          <DescFile image={dwPhoto} />
+          <DescFile image={urlPhoto} />
+        </div>
+        <Footer/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+ 
+
     </>
-  )
+  );
 }
 
-export default App
+export default App;
